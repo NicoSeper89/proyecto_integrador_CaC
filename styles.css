@@ -1,0 +1,21 @@
+#carouselExampleSlidesOnly .carousel-inner {
+  height: 500px;
+  overflow: hidden; /* Oculta el contenido fuera del contenedor */
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+}
+
+#carouselExampleSlidesOnly .carousel-inner img {
+  object-fit: cover; /* Escala y recorta la imagen para que se ajuste al contenedor */
+  height: 100%; /* Ajusta la altura al 100% para llenar el contenedor */
+  width: 100%; /* Ajusta el ancho al 100% para llenar el contenedor */
+}
+
+
+@media (max-width: 890px) {
+
+    #carouselExampleSlidesOnly .carousel-inner {
+        align-items: start;
+    }
+
+}
