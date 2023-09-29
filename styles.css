@@ -9,7 +9,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 #carouselFade .carousel-inner {
@@ -25,6 +25,27 @@
   width: 100%;
 }
 
+.inputText {
+  height: 2rem;
+}
+
+.inputText::placeholder {
+  font-size: 12px;
+}
+
+#inputTextarea {
+  min-height: 130px;
+  width: 100%;
+}
+
+#inputTextarea::placeholder {
+  font-size: 20px;
+}
+
+#homeFormTitle a {
+  text-decoration: underline dotted;
+}
+
 @media (max-width: 1080px) {
   #carouselFade .carousel-inner {
     align-items: start;
@@ -37,8 +58,7 @@
 }
 
 @media (max-width: 740px) {
-
-  #homeCard{
+  #homeCard {
     width: 78%;
   }
 
@@ -53,5 +73,4 @@
   #homeCard a {
     font-size: 0.7rem;
   }
-
 }
