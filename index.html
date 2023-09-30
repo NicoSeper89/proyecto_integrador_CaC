@@ -16,11 +16,12 @@
     <!-- Nav Bar -->
 
     <nav
+      id="nav-bar"
       class="navbar navbar-expand-lg bg-body-tertiary bg-dark"
       data-bs-theme="dark"
     >
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
           <img src="./images/codoacodo.png" alt="logoCodoACodo" width="140" />
           Conf Bs As
         </a>
@@ -40,12 +41,12 @@
           id="navbarNavAltMarkup"
         >
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#"
+            <a class="nav-link active" aria-current="page" href="#nav-bar"
               >La conferencia</a
             >
-            <a class="nav-link" href="#">Los oradores</a>
-            <a class="nav-link" href="#">El lugar y la fecha</a>
-            <a class="nav-link" href="#">Conviértete en orador</a>
+            <a class="nav-link" href="#speakers">Los oradores</a>
+            <a class="nav-link" href="#bsas-card">El lugar y la fecha</a>
+            <a class="nav-link" href="#contact-form">Conviértete en orador</a>
             <a class="nav-link link-success" href="#">Comprar tickets</a>
           </div>
         </div>
@@ -140,7 +141,10 @@
         </button>
       </div>
     </header>
-    <main class="container">
+
+    <!-- Speakers Cards -->
+
+    <main id="speakers" class="container">
       <div class="text-center mt-3 mt-2">
         <span>CONOCE A LOS</span>
         <h2>ORADORES</h2>
@@ -202,7 +206,10 @@
         </div>
       </div>
     </main>
-    <section class="my-4">
+
+    <!-- BsAs Card -->
+
+    <section class="my-4" id="bsas-card">
       <div class="card text-white bg-dark mb-3">
         <div class="row g-0">
           <div class="col-md-6">
@@ -233,19 +240,22 @@
       </div>
     </section>
 
+    <!-- Contact Form -->
+
     <div
       class="container d-flex flex-column justify-content-center align-items-center"
+      id="contact-form"
     >
       <div class="text-center">
         <span>CONVIÉRTETE EN UN</span>
         <h3>ORADORES</h3>
       </div>
-      <span id="homeFormTitle" class="mb-2">
+      <span id="homeFormTitle" class="text-center mb-2">
         Anótate como orador para dar una
         <a href="" class="text-dark">charla ignite</a>. Cuéntanos de qué quieres
         hablar!
       </span>
-      <form class="row g-3 w-50">
+      <form class="row g-3">
         <div class="col-6">
           <input
             type="text"
@@ -268,8 +278,7 @@
             class="form-control"
             id="inputTextarea"
             placeholder="Sobre qué quieres hablar?"
-          >
-          </textarea>
+          ></textarea>
           <p class="fw-lighter text-muted">
             Recuerda incluir un titulo para tu charla
           </p>
@@ -284,10 +293,14 @@
       </form>
     </div>
 
+    <!-- Footer -->
+
     <footer id="footer" class="mt-4">
       <ul class="nav justify-content-center align-items-center py-4 fs-6">
         <li class="nav-item">
-          <a class="nav-link active text-white" href="#">Preguntas frecuentes</a>
+          <a class="nav-link active text-white" href="#"
+            >Preguntas frecuentes</a
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Contáctanos</a>
