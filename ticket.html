@@ -80,48 +80,51 @@
         <h2 class="m-0">VALOR DE TICKET $200</h2>
       </div>
       <div class="row justify-content-center">
-        <div class="col-7 row justify-content-center gy-1">
+        <form id="ticketsForm" class="col-7 row justify-content-center gy-1">
           <div class="col-6 py-1">
-            <input type="text" class="form-control" placeholder="Nombre" />
+            <input type="text" class="form-control form-input" id="form-name" name="formName" placeholder="Nombre" aria-label="nombre" />
           </div>
           <div class="col-6 py-1">
-            <input type="text" class="form-control" placeholder="Apellido" />
+            <input type="text" class="form-control form-input" id="form-surname" name="formSurname" placeholder="Apellido" aria-label="apellido" />
           </div>
           <div class="col-12 py-1">
-            <input type="text" class="form-control" placeholder="Correo" />
+            <input type="text" class="form-control form-input" id="form-email" name="formEmail" placeholder="Correo" aria-label="correo"/>
           </div>
           <div class="col-6 text-start py-1">
             <label for="exampleFormControlTextarea1" class="form-label"
               >Cantidad</label
             >
             <input
-              type="text"
-              class="form-control"
+              type="number"
+              min="0"
+              class="form-control form-input"
+              id="form-amount"
+              name="formAmount"
               placeholder="cantidad"
-              aria-label="Last name"
+              aria-label="cantidad de tickets"
             />
           </div>
           <div class="col-6 text-start py-1">
             <label for="exampleFormControlTextarea1" class="form-label"
               >Categoria</label
             >
-            <select class="form-select" aria-label="Default select example">
-              <option selected disabled>Categoria</option>
-              <option value="Estudiante">Estudiante</option>
-              <option value="Trainee">Trainee</option>
-              <option value="Junior">Junior</option>
+            <select class="form-select" id="form-categories" name="formCategories" aria-label="categorias">
+              <option selected disabled value="">Categoria</option>
+              <option value="80">Estudiante</option>
+              <option value="50">Trainee</option>
+              <option value="15">Junior</option>
             </select>
           </div>
           <div class="col-12 my-2">
-            <div class="alert alert-info mt-3 text-start text-primary" role="alert">
-              A simple info alert—check it out!
+            <div class="alert alert-info mt-3 text-start text-primary" id="formAlert" role="alert">
+              Total a pagar: $0
             </div>
           </div>
           <div class="col-12 d-flex justify-content-between gap-3 py-1">
             <button class="btn btn-success w-50" type="submit">Borrar</button>
-            <button class="btn btn-success w-50" type="submit">Resumen</button>
+            <input class="btn btn-success w-50" type="submit" value="Resumen">
           </div>
-        </div>
+        </form>
       </div>
     </div>
 
@@ -158,5 +161,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="tickets.js"></script>
   </body>
 </html>
