@@ -1,6 +1,6 @@
 <?php
 
-include('config/db_config.php');
+include(__DIR__ . '/../config/db_config.php');
 
 function getSpeakers() {
 
