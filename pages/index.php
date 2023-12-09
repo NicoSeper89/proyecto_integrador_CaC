@@ -15,43 +15,7 @@
   <body>
     <!-- Nav Bar -->
 
-    <nav
-      id="nav-bar"
-      class="navbar navbar-expand-lg bg-body-tertiary bg-dark sticky-top"
-      data-bs-theme="dark"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="http://localhost/proyecto_integrador_CaC/?page=index">
-          <img src="http://localhost/proyecto_integrador_CaC/assets/images/codoacodo.png" alt="logoCodoACodo" width="140" />
-          Conf Bs As
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNavAltMarkup"
-        >
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#nav-bar"
-              >La conferencia</a
-            >
-            <a class="nav-link" href="#speakers">Los oradores</a>
-            <a class="nav-link" href="#bsas-card">El lugar y la fecha</a>
-            <a class="nav-link" href="#contact-form">Conviértete en orador</a>
-            <a class="nav-link link-success" href="http://localhost/proyecto_integrador_CaC/?page=tickets">Comprar tickets</a>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <?php include('components/navBar.php'); ?>
 
     <!-- Carousel Home -->
 
@@ -68,8 +32,8 @@
             del evento, a otros estudiantes de Codo a Codo y los oradores de
             primer nivel que tenemos para ti. Te esperamos!
           </p>
-          <a href="#" class="btn btn-outline-light">Quiero ser orador</a>
-          <a href="#" class="btn btn-success">Comprar tickets</a>
+          <a href="http://localhost/proyecto_integrador_CaC/?page=index#contact-form" class="btn btn-outline-light">Quiero ser orador</a>
+          <a href="http://localhost/proyecto_integrador_CaC/?page=tickets" class="btn btn-success">Comprar tickets</a>
         </div>
       </div>
       <div id="carouselFade" class="carousel slide carousel-fade">
@@ -252,7 +216,7 @@
       </div>
       <span id="homeFormTitle" class="text-center mb-2">
         Anótate como orador para dar una
-        <a href="" class="text-dark">charla ignite</a>. Cuéntanos de qué quieres
+        <a href="http://localhost/proyecto_integrador_CaC/?page=index#" class="text-dark">charla ignite</a>. Cuéntanos de qué quieres
         hablar!
       </span>
       <form class="row g-3">
@@ -295,33 +259,7 @@
 
     <!-- Footer -->
 
-    <footer id="footer" class="mt-4">
-      <ul class="nav justify-content-center align-items-center py-4 fs-6">
-        <li class="nav-item">
-          <a class="nav-link active text-white" href="#"
-            >Preguntas frecuentes</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Contáctanos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Prensa</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Conferencias</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Términos y condiciones</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Privacidad</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Estudiantes</a>
-        </li>
-      </ul>
-    </footer>
+    <?php include('components/footer.php'); ?>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
