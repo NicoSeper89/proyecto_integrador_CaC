@@ -212,19 +212,20 @@
     >
       <div class="text-center">
         <span>CONVIÉRTETE EN UN</span>
-        <h3>ORADORES</h3>
+        <h3>ORADOR</h3>
       </div>
       <span id="homeFormTitle" class="text-center mb-2">
         Anótate como orador para dar una
-        <a href="http://localhost/proyecto_integrador_CaC/?page=index#" class="text-dark">charla ignite</a>. Cuéntanos de qué quieres
+        <a href="http://localhost/proyecto_integrador_CaC/?page=index" class="text-dark">charla ignite</a>. Cuéntanos de qué quieres
         hablar!
       </span>
-      <form class="row g-3">
+      <form class="row g-3" action="handlers/form-handler.php" method="post">
         <div class="col-6">
           <input
             type="text"
             class="inputText form-control"
             id="inputName"
+            name="name"
             placeholder="Nombre"
           />
         </div>
@@ -233,14 +234,25 @@
             type="text"
             class="inputText form-control"
             id="inputSurname"
+            name="surname"
             placeholder="Apellido"
+          />
+        </div>
+        <div class="col-12">
+          <input
+            type="text"
+            class="inputText form-control"
+            id="inputEmail"
+            name="email"
+            placeholder="Email"
           />
         </div>
         <div class="col-12">
           <textarea
             type="text"
             class="form-control"
-            id="inputTextarea"
+            id="inputSubject"
+            name="subject"
             placeholder="Sobre qué quieres hablar?"
           ></textarea>
           <p class="fw-lighter text-muted">
