@@ -1,8 +1,5 @@
 <?php
-include('config/db_config.php');
-
-$sql = "SELECT * FROM oradores";
-$result = $db->query($sql);
+include('includes/speakerCRUD.php');
 ?>
 
 <!doctype html>
@@ -20,6 +17,9 @@ $result = $db->query($sql);
     <div class="list-group gap-3">
 
         <?php
+
+        $result = getSpeakers();
+
         foreach ($result as $speaker) {
         ?>
             <a href="#" class="list-group-item list-group-item-action" aria-current="true">
