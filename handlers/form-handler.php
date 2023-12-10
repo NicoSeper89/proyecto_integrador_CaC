@@ -11,9 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $newSpeaker = addSpeaker($name, $surname, $email, $subject);
 
+    header("Location: /proyecto_integrador_CaC/?newspeaker=" . ($newSpeaker? "success" : "failed") . "&page=index#contact-form");
+    exit();
+
 } else {
     echo "Acceso no permitido";
 }
-
-header("Location: /proyecto_integrador_CaC/?page=index#contact-form");
-exit();

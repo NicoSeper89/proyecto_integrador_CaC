@@ -188,6 +188,27 @@ define('URL_BASE', 'http://localhost/proyecto_integrador_CaC');
     </form>
   </div>
 
+  <div class="d-flex justify-content-center pt-3">
+    <?php
+    if (isset($_GET['newspeaker'])) {
+
+      if ($_GET['newspeaker'] == "success") {
+    ?>
+        <div class="alert alert-info w-75 text-center" role="alert">
+          El registro como orador se realizó con éxito.
+        </div>
+      <?php
+      } else if ($_GET['newspeaker'] == "failed") {
+      ?>
+        <div class="alert alert-danger w-75 text-center" role="alert">
+          No se pudo procesar el registro como orador, ocurrió un error. Inténtelo nuevamente más tarde.
+        </div>
+    <?php
+      }
+    }
+    ?>
+  </div>
+
   <!-- Footer -->
 
   <?php include('components/footer.php'); ?>
