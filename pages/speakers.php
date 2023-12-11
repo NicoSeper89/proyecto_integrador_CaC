@@ -45,7 +45,9 @@ define('URL_BASE', 'http://localhost/proyecto_integrador_CaC');
                         <td><?php echo $speaker['tema']; ?></td>
                         <td><?php echo $speaker['fecha_alta']; ?></td>
                         <td class="d-flex justify-content-end gap-3">
-                            
+                            <button type="button" class="btn btn-outline-success p-2 py-0" data-bs-toggle="modal" data-bs-target="#updateSpeakerModal<?php echo $speaker['id_orador']; ?>" data-id="updateSpeakerModal<?php echo $speaker['id_orador']; ?>">
+                                ACTUALIZAR
+                            </button>
                             <button type="button" class="btn btn-outline-danger p-2 py-0" data-bs-toggle="modal" data-bs-target="#deleteSpeakerModal<?php echo $speaker['id_orador']; ?>" data-id="deleteSpeakerModal<?php echo $speaker['id_orador']; ?>">
                                 ELIMINAR
                             </button>
@@ -53,6 +55,7 @@ define('URL_BASE', 'http://localhost/proyecto_integrador_CaC');
                     </tr>
                 <?php
                     require "components/deleteSpeakerModal.php";
+                    require "components/updateSpeakerModal.php";
                 }
                 ?>
             </tbody>

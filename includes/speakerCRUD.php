@@ -22,6 +22,16 @@ function addSpeaker($name, $surname, $email, $subject) {
     return $result;
 }
 
+function updateSpeaker($speakerId, $name, $surname, $email, $subject) {
+
+    global $db;
+
+    $sql = "UPDATE oradores SET nombre = '$name', apellido = '$surname', mail = '$email', tema = '$subject' WHERE id_orador = '$speakerId'";
+    $result = $db->query($sql);
+
+    return $result;
+}
+
 function deleteSpeaker($speakerId) {
     
     global $db;
