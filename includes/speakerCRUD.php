@@ -22,4 +22,14 @@ function addSpeaker($name, $surname, $email, $subject) {
     return $result;
 }
 
+function deleteSpeaker($speakerId) {
+    
+    global $db;
+
+    $sql = "DELETE FROM oradores WHERE id_orador = '$speakerId'";
+    $result = $db->query($sql);
+
+    return $result;
+}
+
 ?>

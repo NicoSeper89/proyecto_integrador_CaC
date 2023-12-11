@@ -166,7 +166,7 @@ define('URL_BASE', 'http://localhost/proyecto_integrador_CaC');
       <a href="<?php echo URL_BASE ?>/?page=index#" class="text-dark">charla ignite</a>. Cuéntanos de qué quieres
       hablar!
     </span>
-    <form class="row g-3" action="handlers/form-handler.php" method="post">
+    <form class="row g-3" action="handlers/add-speaker-form-handler.php" method="post">
       <div class="col-6">
         <input type="text" class="inputText form-control" id="inputName" name="name" placeholder="Nombre" />
       </div>
