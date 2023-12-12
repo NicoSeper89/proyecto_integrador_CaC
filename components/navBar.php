@@ -1,3 +1,15 @@
+<?php
+$page = isset($_GET['page']) ? $_GET['page'] : '';
+
+$pages = ['index', 'tickets', 'speakers'];
+
+if (!in_array($page, $pages)) {
+    $page = "";
+}else {
+    $page = $page;
+}
+?>
+
 <nav id="nav-bar" class="navbar navbar-expand-lg bg-body-tertiary bg-dark sticky-top" data-bs-theme="dark">
     <div class="container">
         <a class="navbar-brand" href="<?php echo URL_BASE ?>/?page=index#">
@@ -9,8 +21,8 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="<?php echo URL_BASE ?>/?page=index#">La conferencia</a>
-                <a class="nav-link" href="<?php echo URL_BASE ?>/?page=speakers">Los oradores</a>
+                <a class="nav-link <?php echo $page == "index"? "active" : "" ?>" aria-current="page" href="<?php echo URL_BASE ?>/?page=index#">La conferencia</a>
+                <a class="nav-link <?php echo $page == "speakers"? "active" : "" ?>" href="<?php echo URL_BASE ?>/?page=speakers">Los oradores</a>
                 <a class="nav-link" href="<?php echo URL_BASE ?>/?page=index#bsas-card">El lugar y la fecha</a>
                 <a class="nav-link" href="<?php echo URL_BASE ?>/?page=index#contact-form">Conviértete en orador</a>
                 <a class="nav-link link-success" href="<?php echo URL_BASE ?>/?page=tickets">Comprar tickets</a>
