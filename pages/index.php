@@ -166,26 +166,9 @@ define('URL_BASE', 'http://localhost/proyecto_integrador_CaC');
       <a href="<?php echo URL_BASE ?>/?page=index#" class="text-dark">charla ignite</a>. Cuéntanos de qué quieres
       hablar!
     </span>
-    <form class="row g-3" action="handlers/add-speaker-form-handler.php" method="post">
-      <div class="col-6">
-        <input type="text" class="inputText form-control" id="inputName" name="name" placeholder="Nombre" />
-      </div>
-      <div class="col-6">
-        <input type="text" class="inputText form-control" id="inputSurname" name="surname" placeholder="Apellido" />
-      </div>
-      <div class="col-12">
-        <input type="text" class="inputText form-control" id="inputEmail" name="email" placeholder="Email" />
-      </div>
-      <div class="col-12">
-        <textarea type="text" class="form-control" id="inputSubject" name="subject" placeholder="Sobre qué quieres hablar?"></textarea>
-        <p class="fw-lighter text-muted">
-          Recuerda incluir un titulo para tu charla
-        </p>
-      </div>
-      <div class="col-12">
-        <input type="submit" class="btn btn-success w-100 mb-2" id="submitButton" />
-      </div>
-    </form>
+
+    <?php include('components/addSpeakerForm.php'); ?>
+
   </div>
 
   <div class="d-flex justify-content-center pt-3">
