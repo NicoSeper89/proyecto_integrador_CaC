@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $newSpeaker = addSpeaker($name, $surname, $email, $subject);
 
-    header("Location: /proyecto_integrador_CaC/?newspeaker=" . ($newSpeaker? "success" : "failed") . "&page=index#contact-form");
+    header("Location: https://trabajointegradorcursophp.000webhostapp.com/?newspeaker=" . ($newSpeaker? "success" : "failed") . "&page=index#contact-form");
     exit();
 
 } else {

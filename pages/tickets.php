@@ -1,5 +1,5 @@
 <?php
-define('URL_BASE', 'http://localhost/proyecto_integrador_CaC');
+define('URL_BASE', 'https://trabajointegradorcursophp.000webhostapp.com');
 ?>
 
 <!DOCTYPE html>

@@ -10,5 +10,5 @@ include("../includes/speakerCRUD.php");
 
 updateSpeaker($speakerId, $name, $surname, $email, $subject);
 
-header("Location: /proyecto_integrador_CaC/?page=speakers");
+header("Location: https://trabajointegradorcursophp.000webhostapp.com/?page=speakers");
 exit();
