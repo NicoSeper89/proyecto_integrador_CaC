@@ -14,52 +14,54 @@ define('URL_BASE', 'http://localhost/proyecto_integrador_CaC');
     <link rel="stylesheet" href="<?php echo URL_BASE ?>/assets/css/styles.css" />
 </head>
 
-<body>
+<body class="d-flex flex-column justify-content-between" style="min-height: 100vh;">
 
-    <?php include('components/navBar.php'); ?>
+    <div class="d-flex flex-column justify-content-start gap-3 py-0 m-0">
+        <?php include('components/navBar.php'); ?>
 
-    <div class="px-5 py-1 m-0">
-        <h1 class="text-center py-1 display-2 text-primary">ORADORES</h1>
+        <h1 class="text-center py-1 text-primary">ORADORES</h1>
 
-        <table class="table gap-3">
+        <div class="px-5">
+            <table class="table gap-3">
 
-            <thead>
-                <tr>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Apellido</th>
-                    <th scope="col">Tema</th>
-                    <th scope="col">Fecha Registro</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-
-                $result = getSpeakers();
-
-                foreach ($result as $speaker) {
-                ?>
+                <thead>
                     <tr>
-                        <td><?php echo $speaker['nombre'] . " " . $speaker['apellido']; ?></td>
-                        <td><?php echo $speaker['mail']; ?></td>
-                        <td><?php echo $speaker['tema']; ?></td>
-                        <td><?php echo $speaker['fecha_alta']; ?></td>
-                        <td class="d-flex justify-content-end gap-3">
-                            <button type="button" class="btn btn-outline-success p-2 py-0" data-bs-toggle="modal" data-bs-target="#updateSpeakerModal<?php echo $speaker['id_orador']; ?>" data-id="updateSpeakerModal<?php echo $speaker['id_orador']; ?>">
-                                ACTUALIZAR
-                            </button>
-                            <button type="button" class="btn btn-outline-danger p-2 py-0" data-bs-toggle="modal" data-bs-target="#deleteSpeakerModal<?php echo $speaker['id_orador']; ?>" data-id="deleteSpeakerModal<?php echo $speaker['id_orador']; ?>">
-                                ELIMINAR
-                            </button>
-                        </td>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Tema</th>
+                        <th scope="col">Fecha Registro</th>
+                        <th scope="col"></th>
                     </tr>
-                <?php
-                    require "components/deleteSpeakerModal.php";
-                    require "components/updateSpeakerModal.php";
-                }
-                ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <?php
+
+                    $result = getSpeakers();
+
+                    foreach ($result as $speaker) {
+                    ?>
+                        <tr>
+                            <td><?php echo $speaker['nombre'] . " " . $speaker['apellido']; ?></td>
+                            <td><?php echo $speaker['mail']; ?></td>
+                            <td><?php echo $speaker['tema']; ?></td>
+                            <td><?php echo $speaker['fecha_alta']; ?></td>
+                            <td class="d-flex justify-content-end gap-3">
+                                <button type="button" class="btn btn-outline-success p-2 py-0" data-bs-toggle="modal" data-bs-target="#updateSpeakerModal<?php echo $speaker['id_orador']; ?>" data-id="updateSpeakerModal<?php echo $speaker['id_orador']; ?>">
+                                    ACTUALIZAR
+                                </button>
+                                <button type="button" class="btn btn-outline-danger p-2 py-0" data-bs-toggle="modal" data-bs-target="#deleteSpeakerModal<?php echo $speaker['id_orador']; ?>" data-id="deleteSpeakerModal<?php echo $speaker['id_orador']; ?>">
+                                    ELIMINAR
+                                </button>
+                            </td>
+                        </tr>
+                    <?php
+                        require "components/deleteSpeakerModal.php";
+                        require "components/updateSpeakerModal.php";
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <?php include('components/footer.php'); ?>
